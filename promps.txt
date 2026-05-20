@@ -1,0 +1,16 @@
+============================CONSULTA================================
+#01 Etapa del proyecto: Etapa 1 Fecha:[20-05-2026]
+------------------------------------------------------------
+PROMPT ENVIADO A COPILOT: [Copiar aqui el texto exacto que se escribio en
+Copilot]
+------------------------------------------------------------
+RESPUESTA RECIBIDA (resumen breve): [Resumir en no mas de tres oraciones que
+respondio Copilot]
+------------------------------------------------------------
+USO EN EL PROYECTO: [Explicar con tus propias palabras si usaste la
+respuesta tal cual, si la modificaste o si la descartaste. Indicar por que
+tomaste esa decision.]
+------------------------------------------------------------
+REFLEXION PERSONAL: [Escribir con tus propias palabras: fue util el
+prompt? Obtuviste lo que esperabas? Que cambiarias la proxima vez?]
+====================================================================

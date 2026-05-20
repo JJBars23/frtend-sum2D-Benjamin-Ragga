@@ -1,0 +1,287 @@
+
+/* Variables de colores */
+:root {
+    --color-primario: #1a237e; /* Azul oscuro */
+    --color-secundario: #424242; /* Gris */
+    --color-acento: #ff6f00; /* Naranja */
+    --color-fondo: #f5f5f5; /* Blanco */
+    --color-texto: #212121; /* Negro */
+}
+
+/* Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Tipografía para el cuerpo */
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif; /* Tipografía moderna para títulos */
+}
+
+/* Sección Servicios */
+#servicios {
+    padding: 20px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-servicio {
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-secundario);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-servicio img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Sección Marcas */
+#marcas {
+    padding: 20px;
+}
+
+.marcas-lista {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.marcas-lista li {
+    text-align: center;
+}
+
+.marcas-lista img {
+    max-width: 50px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Tabla de Precios */
+#precios {
+    padding: 20px;
+    overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--color-secundario);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-fondo);
+}
+
+/* Sección Testimonios */
+#testimonios {
+    padding: 20px;
+    background-color: var(--color-fondo);
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-testimonio {
+    border: 1px solid var(--color-secundario);
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-testimonio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-testimonio h3 {
+    margin: 0 0 10px;
+    color: var(--color-primario);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.footer-contenido h3, .footer-contenido h4 {
+    margin: 0 0 10px;
+}
+
+.footer-contenido p {
+    margin: 5px 0;
+}
+
+.redes-sociales {
+    list-style: none;
+    padding: 0;
+}
+
+.redes-sociales li {
+    margin: 5px 0;
+}
+
+.redes-sociales a {
+    color: white;
+    text-decoration: none;
+}
+
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Adaptabilidad para pantallas móviles */
+@media (max-width: 768px) {
+    .servicios-grid, .testimonios-grid, .footer-contenido {
+        grid-template-columns: 1fr; /* Apila los elementos en una sola columna */
+    }
+
+    .marcas-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto; /* Permite desplazamiento horizontal */
+    }
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+}
+
+nav div {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-acento);
+}
+/* Sección Hero */
+#hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: url('ruta-de-la-imagen.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#hero a {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero a:hover {
+    background-color: #e65c00; /* Color más oscuro para el hover */
+}
+
+/* Indicadores visuales de confianza */
+#hero > div:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#hero > div:last-child div {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    max-width: 150px;
+}
+
+#hero > div:last-child div span {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 10px;
+}

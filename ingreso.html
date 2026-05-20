@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Ingreso - TechFix</title>
+    <link rel="stylesheet" href="ingreso.css">
+</head>
+<body>
+    <header>
+        <h1>Registrar Ingreso</h1>
+    </header>
+    <main>
+        <form action="#" method="POST">
+            <!-- Sección A: Datos del Cliente -->
+            <fieldset>
+                <legend>Datos del Cliente</legend>
+                <label for="nombre">Nombre completo <span class="required">*</span>:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="dni">DNI <span class="required">*</span>:</label>
+                <input type="text" id="dni" name="dni" required>
+
+                <label for="email">Correo electrónico <span class="required">*</span>:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="confirmar-email">Confirmar correo electrónico <span class="required">*</span>:</label>
+                <input type="email" id="confirmar-email" name="confirmar-email" required>
+
+                <label for="telefono">Teléfono de contacto <span class="required">*</span>:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <fieldset>
+                    <legend>Tipo de cliente <span class="required">*</span>:</legend>
+                    <input type="radio" id="particular" name="tipo-cliente" value="particular" required>
+                    <label for="particular">Particular</label>
+                    <input type="radio" id="empresa" name="tipo-cliente" value="empresa" required>
+                    <label for="empresa">Empresa</label>
+                    <div id="empresa-extra" style="display: none;">
+                        <label for="nombre-empresa">Nombre de la empresa:</label>
+                        <input type="text" id="nombre-empresa" name="nombre-empresa">
+                        <label for="cuit">CUIT:</label>
+                        <input type="text" id="cuit" name="cuit">
+                    </div>
+                </fieldset>
+
+                <label for="provincia">Provincia <span class="required">*</span>:</label>
+                <select id="provincia" name="provincia" required>
+                    <option value="">Seleccione una provincia</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Tucumán">Tucumán</option>
+                    <option value="Salta">Salta</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquén">Neuquén</option>
+                    <option value="Río Negro">Río Negro</option>
+                </select>
+
+                <label for="localidad">Localidad <span class="required">*</span>:</label>
+                <input type="text" id="localidad" name="localidad" required>
+            </fieldset>
+
+            <!-- Sección B: Datos del Equipo -->
+            <fieldset>
+                <legend>Datos del Equipo</legend>
+                <label for="tipo-dispositivo">Tipo de dispositivo <span class="required">*</span>:</label>
+                <select id="tipo-dispositivo" name="tipo-dispositivo" required>
+                    <option value="">Seleccione un dispositivo</option>
+                    <option value="Notebook">Notebook</option>
+                    <option value="Computador de escritorio">Computador de escritorio</option>
+                    <option value="Impresora">Impresora</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Teléfono móvil">Teléfono móvil</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <div id="otro-dispositivo" style="display: none;">
+                    <label for="especificar-dispositivo">Especificar:</label>
+                    <input type="text" id="especificar-dispositivo" name="especificar-dispositivo">
+                </div>
+
+                <label for="marca">Marca <span class="required">*</span>:</label>
+                <select id="marca" name="marca" required>
+                    <option value="">Seleccione una marca</option>
+                    <option value="HP">HP</option>
+                    <option value="Dell">Dell</option>
+                    <option value="Lenovo">Lenovo</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Otra">Otra</option>
+                </select>
+                <div id="otra-marca" style="display: none;">
+                    <label for="especificar-marca">Especificar:</label>
+                    <input type="text" id="especificar-marca" name="especificar-marca">
+                </div>
+
+                <label for="modelo">Modelo <span class="required">*</span>:</label>
+                <input type="text" id="modelo" name="modelo" required>
+            </fieldset>
+
+            <!-- Botones de acción -->
+            <div class="form-buttons">
+                <button type="submit">Registrar ingreso</button>
+                <button type="reset">Limpiar</button>
+                <a href="index.html">Volver al inicio</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
